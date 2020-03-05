@@ -8,7 +8,7 @@ const size = {
   regular: 17,
   medium: 14,
   small: 12,
-}
+};
 
 export default StyleSheet.create({
   h1: {

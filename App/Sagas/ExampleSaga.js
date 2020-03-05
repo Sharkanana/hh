@@ -11,10 +11,10 @@ import { userService } from 'App/Services/UserService'
 export function* fetchUser() {
   // Dispatch a redux action using `put()`
   // @see https://redux-saga.js.org/docs/basics/DispatchingActions.html
-  yield put(ExampleActions.fetchUserLoading())
+  yield put(ExampleActions.fetchUserLoading());
 
   // Fetch user informations from an API
-  const user = yield call(userService.fetchUser)
+  const user = yield call(userService.fetchUser);
   if (user) {
     yield put(ExampleActions.fetchUserSuccess(user))
   } else {

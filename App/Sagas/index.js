@@ -1,8 +1,8 @@
 import { takeLatest, all } from 'redux-saga/effects'
-import { ExampleTypes } from 'App/Stores/Example/Actions'
 import { StartupTypes } from 'App/Stores/Startup/Actions'
-import { fetchUser } from './ExampleSaga'
 import { startup } from './StartupSaga'
+import {PlanTypes} from "../Stores/Plan/Actions";
+import {fetchPlan} from "./PlanSaga";
 
 export default function* root() {
   yield all([
@@ -11,7 +11,7 @@ export default function* root() {
      */
     // Run the startup saga when the application starts
     takeLatest(StartupTypes.STARTUP, startup),
-    // Call `fetchUser()` when a `FETCH_USER` action is triggered
-    takeLatest(ExampleTypes.FETCH_USER, fetchUser),
+    // Call `fetchPlan()` when a `FETCH_PLAN` action is triggered
+    takeLatest(PlanTypes.FETCH_PLAN, fetchPlan),
   ])
 }

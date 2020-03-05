@@ -6,7 +6,7 @@ import { NavigationActions, StackActions } from 'react-navigation'
  * @see https://reactnavigation.org/docs/en/navigating-without-navigation-prop.html
  */
 
-let navigator
+let navigator;
 
 /**
  * This function is called when the RootScreen is created to set the navigator instance to use.

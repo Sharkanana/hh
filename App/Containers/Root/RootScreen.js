@@ -29,13 +29,13 @@ class RootScreen extends Component {
 
 RootScreen.propTypes = {
   startup: PropTypes.func,
-}
+};
 
-const mapStateToProps = (state) => ({})
+const mapStateToProps = (state) => ({});
 
 const mapDispatchToProps = (dispatch) => ({
   startup: () => dispatch(StartupActions.startup()),
-})
+});
 
 export default connect(
   mapStateToProps,
